@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-key */
 import {useState} from 'react';
 import axios from 'axios';
+
 export default function Home() {
 	const [keyword, setKeyword] = useState(null);
-	let [diet, setDiet] = useState(null);
+	 let [diet, setDiet] = useState(null);
 	const [exclude, setExclude] = useState(null);
 	const [response, setResponse] = useState(null);
 	// Gets the recipes matching the input term
@@ -28,6 +29,7 @@ export default function Home() {
 			<h2 className="text-primary text-2xl font-light mt-5">
 				Search recipes from all over the world.
 			</h2>
+
 			<form
 				className="sm:mx-auto mt-20 md:max-w-4xl justify-center flex flex-col sm:w-full sm:flex"
 				onSubmit={e => {
@@ -38,7 +40,7 @@ export default function Home() {
 			>
 				<input
 					type="text"
-					className="flex w-full rounded-lg px-5 py-3 text-base text-background font-semibold focus:outline-none focus:ring-2 focus:ring-active"
+					className="flex w-full rounded-lg px-5 border-2 py-3 text-base text-background font-semibold focus:outline-none focus:ring-2 focus:ring-active"
 					placeholder="Enter a recipe"
 					onChange={e => {
 						setKeyword(e.target.value);
@@ -51,7 +53,7 @@ export default function Home() {
 							Diet
 						</label>
 						<select
-							className="mt-1 flex w-full rounded-lg px-5 py-3 text-base text-background font-bold focus:outline-none"
+							className="mt-1 flex w-full border-2 rounded-lg px-5 py-3 text-base text-background font-bold focus:outline-none"
 							onChange={e => setDiet(e.target.value)}
 						>
 							{[
@@ -72,19 +74,20 @@ export default function Home() {
 						</label>
 						<input
 							type="text"
-							className="mt-1 w-full rounded-lg px-5 py-3 text-base text-background font-bold focus:outline-none"
+							className="mt-1 w-full border-2 rounded-lg px-5 py-3 text-base text-background font-bold focus:outline-none"
 							placeholder="cocunut"
 							onChange={e => setExclude(e.target.value)}
 						></input>
 					</div>
 				</div>
 				<button
-					className="mt-5 w-full rounded-lg px-5 py-3 bg-active text-base text-primary font-bold hover:text-active hover:bg-primary transition-colors duration-300 sm:px-10"
+					className="mt-5 w-full rounded-lg px-5 py-3 bg-[blue] text-base text-primary font-bold hover:text-active hover:bg-primary transition-colors duration-300 sm:px-10"
 					type="submit"
 				>
 					Search
 				</button>
 			</form>
 		</div>
+
 	);
 }
