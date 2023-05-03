@@ -8,7 +8,7 @@ import {useState} from 'react';
 import axios from 'axios';
 export default function Home() {
 	const [keyword, setKeyword] = useState(null);
-	let [diet, setDiet] = useState(null);
+	const [diet, setDiet] = useState(null);
 	const [exclude, setExclude] = useState(null);
 	const [response, setResponse] = useState(null);
 	// Gets the recipes matching the input term
