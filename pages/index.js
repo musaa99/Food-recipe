@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import {useState} from 'react';
 import axios from 'axios';
+import Body from './Body';
 
 export default function Home() {
 	const [keyword, setKeyword] = useState(null);
@@ -26,6 +27,7 @@ export default function Home() {
 			<h1 className="text-6xl font-bold text-active mt-20">
 				Recipe Search
 			</h1>
+			<Body/>
 			<h2 className="text-primary text-2xl font-light mt-5">
 				Search recipes from all over the world.
 			</h2>
